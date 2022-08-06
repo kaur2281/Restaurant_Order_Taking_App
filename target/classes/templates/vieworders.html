@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Leading Restaurant Chain</title>
+<script src="js/jquery.js"></script>
+<script src="js/script2.js"></script>
+</head>
+<body>
+	<header th:insert="fragments/header.html::header"></header>
+	<nav th:insert="fragments/menu.html::menu"></nav>
+	<div id="updateForm" style="display:none">
+		<table cellpadding="10" cellspacing="10" align="center">
+			<caption> Edit Order ID ( <span id="oid"></span>) </caption>
+			<tr>
+				<td>Dish Name:</td>
+				<td><input type="hidden" id="dishid">
+				<input type="hidden" id="orderid">
+				<span id="dishname"></span>		
+				</td>
+			</tr>
+			<tr>
+				<td>Dish Price:</td>
+				<td>$ <span id="dishprice"></span></td>
+			</tr>
+			<tr>
+				<td>Customer Email ID:</td>
+				<td><input type="email" required id="email"></td>
+			</tr>
+			
+			<tr>
+				<td>Enter Quantity:</td>
+				<td><input type="number" required id="qty" value="0"></td>
+			</tr>
+			<tr>
+				<td> Total Order Amount: </td>
+				<td>$ <span id="total"></span></td>			
+			</tr>
+			<tr>
+				<td align="center"><input type="button" id="btn1"
+					value="Update Order"></td>
+				<td align="center"><input type="button" id="btn2"
+					value="Close Form"></td>
+			</tr>
+		</table>
+	</div>
+	<table cellpadding="10" cellspacing="10" align="center">
+		<thead>
+			<th>Order ID</th>
+			<th>Dish Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Total</th>
+			<th colspan="2" align="center">Operations</th>
+		</thead>
+		<tbody id="table_body">
+
+		</tbody>
+	</table>
+	<footer th:insert="fragments/footer.html::footer"></footer>
+</body>
+</html>

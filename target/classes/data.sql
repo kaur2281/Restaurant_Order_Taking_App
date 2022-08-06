@@ -1,0 +1,1 @@
+insert into dish(dish_name,dish_price) values ('Pizza',8.99),('Pasta',10.99),('Fries',2.99);
